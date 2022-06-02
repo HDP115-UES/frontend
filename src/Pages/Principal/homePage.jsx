@@ -23,7 +23,7 @@ export const HomePage = () => {
             <Row className="containerReport">
               <Col className="d-flex align-items-center justify-content-center">
                 <img src={getAccident}></img>{" "}
-                <span className="ms-4">Reportar un accidente</span>
+                <span className="ms-4">Consultar un accidente</span>
               </Col>
             </Row>
           </Col>
