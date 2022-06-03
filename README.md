@@ -14,7 +14,12 @@ Posiblemente saldrán unos warnings sobre las depedencias, pero no nos impedirá
 xd
 =======
 
-xd
+<<<<<<< HEAD
+
 >>>>>>> 900981b196a8528cf67ef69095973ac7e8ceb879
 
 hoolasdofhaksjdhfkjsa
+=======
+efrain
+>>>>>>> 56b43b375c5362b83096e51678bb1b275cfb362e
+sdfasdf
