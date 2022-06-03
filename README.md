@@ -10,4 +10,11 @@ Posiblemente saldrán unos warnings sobre las depedencias, pero no nos impedirá
 
 ``npm run start``
 
+<<<<<<< HEAD
 xd
+=======
+
+xd
+>>>>>>> 900981b196a8528cf67ef69095973ac7e8ceb879
+
+hoolasdofhaksjdhfkjsa
