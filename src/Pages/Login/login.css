@@ -1,16 +1,4 @@
-.loginContainer span {
-  color: var(--fontColor);
-  font-weight: 600;
-  margin-left: 25px;
-  margin-top: 25px;
-  padding: 5px;
-  cursor: pointer;
-}
 
-.loginContainer .arrowBack {
-  height: 18px;
-  width: 18px;
-}
 .formContainer {
   height: 600px;
 }

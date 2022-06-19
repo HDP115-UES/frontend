@@ -14,7 +14,7 @@ export const HomePage = () => {
           <Col xs={12} sm={6}>
             <Row className="containerReport ">
               <Col className="d-flex align-items-center justify-content-center">
-                <img src={reportAccident}></img>{" "}
+                <img src={reportAccident} alt="addReport-img"></img>{" "}
                 <span className="ms-4">Reportar un accidente</span>
               </Col>
             </Row>
@@ -22,7 +22,7 @@ export const HomePage = () => {
           <Col xs={12} sm={6}>
             <Row className="containerReport">
               <Col className="d-flex align-items-center justify-content-center">
-                <img src={getAccident}></img>{" "}
+                <img src={getAccident} alt="getReport-img"></img>{" "}
                 <span className="ms-4">Consultar un accidente</span>
               </Col>
             </Row>
