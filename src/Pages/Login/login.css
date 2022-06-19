@@ -1,8 +1,7 @@
-
-.formContainer {
+.loginContainer {
   height: 600px;
 }
-.formContainer .formInside {
+.loginContainer .formInside {
   height: 80%;
   width: 350px;
   padding: 25px;

@@ -7,7 +7,7 @@ export const Login = () => {
   return (
     <>
       <BackButton />
-      <Container className="d-flex justify-content-center align-items-center formContainer mt-4">
+      <Container className="d-flex justify-content-center align-items-center loginContainer mt-4">
         <Form className="formInside d-flex flex-column justify-content-center">
           <Form.Group className="mb-3 text-start" controlId="formBasicEmail">
             <Form.Label>Correo electrónico</Form.Label>
