@@ -9,4 +9,3 @@ Si tienen instalado nodejs, abran la terminal en Visual Code e installen todas l
 Posiblemente saldrán unos warnings sobre las depedencias, pero no nos impedirá correr el projecto. Para correr el projecto ejecuten  
 
 ``npm run start``
-

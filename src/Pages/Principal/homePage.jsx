@@ -15,13 +15,12 @@ export const HomePage = () => {
           <Col xs={12} sm={6}>
             <Row className="containerReport ">
               <Col className="d-flex align-items-center justify-content-center">
-                <img src={reportAccident} alt="addReport-img"></img>{" "}
                 <Link
                   to="/addReport"
-                  className="ms-4 text-white"
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: "none", color: "white" }}
                 >
-                  Reportar un accidente
+                  <img src={reportAccident} alt="addReport-img"></img> Reportar
+                  un accidente
                 </Link>
               </Col>
             </Row>
