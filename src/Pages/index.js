@@ -8,5 +8,5 @@ export {
     GetAccidents, 
     Login, 
     SignUp, 
-    ReportAccident 
+    ReportAccident
 };
