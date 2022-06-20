@@ -1,7 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { NavbarPage } from "./Components/Navbar/Navbar";
-import { GetAccidents, HomePage, ReportAccident, SignUp } from "./Pages/index";
+import {
+  GetAccidents,
+  HomePage,
+  ReportAccident,
+  SignUp,
+  UserHome,
+  UserReport,
+} from "./Pages/index";
 import { Login } from "./Pages/Login/login";
 
 function App() {
@@ -15,6 +22,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/getAccidents" element={<GetAccidents />} />
           <Route path="/addReport" element={<ReportAccident />} />
+          <Route path="/myReports" element={<UserReport />} />
+          <Route path="/userHome" element={<UserHome />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -40,6 +40,7 @@ export const HomePage = () => {
             </Row>
           </Col>
         </Row>
+        
       </Container>
     </Container>
   );

@@ -18,13 +18,13 @@ export const GetAccidents = () => {
   useEffect(() => {
     const getData = async () => {
       const response = await axios
-        .get("http://127.0.0.1:8000/Departamento/Departamentos/")
+        .get("http://127.0.0.1:8000/Reporte/Reportes/")
         .catch((error) => {
           console.log(error);
         });
-        setData(response.data);
       console.log(response.data);
-      console.log(data);
+      /*   setData(response.data); */
+      /*   console.log(data); */
     };
     getData();
   }, []);
@@ -56,14 +56,12 @@ export const GetAccidents = () => {
                 <tr>
                   <th>#</th>
                   <th>Accidente</th>
+                  <th>Departamento</th>
+                  <th>Fecha/Hora accidente</th>
+                  <th>Detalles</th>
                 </tr>
               </thead>
               <tbody>
-                {/*    {data.map((accidente, accidenteId) => {
-                  <tr key={accidenteId}>
-                    <td>{accidente.name}</td>
-                  </tr>;
-                })} */}
               </tbody>
             </Table>
           </Col>
