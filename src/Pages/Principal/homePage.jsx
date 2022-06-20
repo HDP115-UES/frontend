@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./homePage.css";
 import reportAccident from "../../Assets/Images/reportAccident.svg";
 import getAccident from "../../Assets/Images/get-reports.svg";
+import { Link } from 'react-router-dom';
+
 export const HomePage = () => {
   return (
     <Container className="seccionPrincipal" fluid>
@@ -14,8 +16,10 @@ export const HomePage = () => {
           <Col xs={12} sm={6}>
             <Row className="containerReport ">
               <Col className="d-flex align-items-center justify-content-center">
+              <Link to="/addReport">
                 <img src={reportAccident} alt="addReport-img"></img>{" "}
                 <span className="ms-4">Reportar un accidente</span>
+                </Link>
               </Col>
             </Row>
           </Col>
