@@ -10,3 +10,4 @@ Posiblemente saldrán unos warnings sobre las depedencias, pero no nos impedirá
 
 ``npm run start``
 
+"Ya puedo" -YO
