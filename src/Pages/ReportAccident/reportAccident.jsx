@@ -17,20 +17,28 @@ export const ReportAccident = () => {
                 controlId="formBasicFistName"
               >
                 <Form.Label>Caracteristica: </Form.Label>
-                <Form.Check
-                  enabled
-                  //type={type}
-                  label={`Simple`}
-                  id={`Simple`}
-                />
-                <Form.Check
-                  enabled
-                  //type={type}
-                  label={`Multiple`}
-                  id={`Multiple`}
-                />
+                
+                <Form>
+      {['radio'].map((type) => (
+        <div key={`inline-${type}`} className="mb-3">
+          <Form.Check
+            inline
+            label="Simple"
+            name="group1"
+            type={type}
+            id={`inline-${type}-1`}
+          />
+          <Form.Check
+            inline
+            label="Multiple"
+            name="group1"
+            type={type}
+            id={`inline-${type}-2`}
+          />
+        </div>
+      ))}
+    </Form>
               </Form.Group>
-
               <Form.Group
                 className="mb-3 text-start"
                 controlId="formBasicLastName"
