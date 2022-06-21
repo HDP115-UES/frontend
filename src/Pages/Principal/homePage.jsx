@@ -28,7 +28,7 @@ export const HomePage = () => {
           <Col xs={12} sm={6}>
             <Row className="containerReport">
               <Col className="d-flex align-items-center justify-content-center">
-                <img src={getAccident} alt="getReport-img"></img>{" "}
+              <img src={reportAccident} alt="addReport-img"></img>{" "}
                 <Link
                   to="/getAccidents"
                   className="ms-4 text-white"
@@ -39,8 +39,7 @@ export const HomePage = () => {
               </Col>
             </Row>
           </Col>
-        </Row>
-        
+        </Row>      
       </Container>
     </Container>
   );

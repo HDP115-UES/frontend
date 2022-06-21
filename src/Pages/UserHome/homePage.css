@@ -1,0 +1,37 @@
+.seccionPrincipal {
+  position: relative;
+  height: 350px;
+}
+.seccionPrincipal::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("/src/Assets/Images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  content: "";
+}
+
+.textContainer h1 {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--fontColor);
+}
+.containerReport {
+  height: 150px;
+  background-color: var(--bgContainer);
+  border-radius: 8px;
+}
+.containerReport:last-child {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  margin-left: 4px;
+}
+span{
+    color: white;
+}
