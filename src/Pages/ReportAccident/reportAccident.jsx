@@ -45,7 +45,7 @@ export const ReportAccident = () => {
                   <option value="3">Three</option>
                 </Form.Select>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicInvo">
+              <Form.Group className="mb-3 text-start" controlId="formBasicInvo">
                 <Form.Label>N° de vehiculos involucrados</Form.Label>
                 <Form.Select aria-label="Default select example">
                   <option>Selecciona una opción</option>
@@ -58,7 +58,7 @@ export const ReportAccident = () => {
               </Form.Group>
             </Col>
             <Col sm={12} md={6}>
-              <Form.Group className="mb-3" controlId="formBasicDepartamento">
+              <Form.Group className="mb-3 text-start" controlId="formBasicDepartamento">
                 <Form.Label>Departamento</Form.Label>
                 <Form.Select aria-label="Default select example">
                   <option>Selecciona una opción</option>
@@ -67,7 +67,7 @@ export const ReportAccident = () => {
                   <option value="3">Three</option>
                 </Form.Select>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicMunicipio">
+              <Form.Group className="mb-3 text-start" controlId="formBasicMunicipio">
                 <Form.Label>Municipio</Form.Label>
                 <Form.Select aria-label="Default select example">
                   <option>Selecciona una opción</option>
@@ -76,7 +76,7 @@ export const ReportAccident = () => {
                   <option value="3">Three</option>
                 </Form.Select>
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicDesc">
+              <Form.Group className="mb-3 text-start" controlId="formBasicDesc">
                 <Form.Label>Descripcion</Form.Label>
                 <Form.Group className="Descripcion" controlId="descripcion">
                   <Form.Control as="textarea" rows={3} />
