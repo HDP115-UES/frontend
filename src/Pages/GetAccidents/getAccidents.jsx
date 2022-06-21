@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import moment from "moment";
 import {
   Container,
   Table,
@@ -22,12 +23,11 @@ export const GetAccidents = () => {
         .catch((error) => {
           console.log(error);
         });
-      console.log(response.data);
-      /*   setData(response.data); */
-      /*   console.log(data); */
+      setData(response.data);
     };
-    getData();
-  }, []);
+    if (!data.length) getData();
+    console.log(data);
+  }, [data]);
   return (
     <>
       <BackButton />
@@ -57,11 +57,30 @@ export const GetAccidents = () => {
                   <th>#</th>
                   <th>Accidente</th>
                   <th>Departamento</th>
-                  <th>Fecha/Hora accidente</th>
+                  <th>Fecha</th>
+                  <th>Hora</th>
                   <th>Detalles</th>
                 </tr>
               </thead>
               <tbody>
+                {data.map((accidente) => {
+                  return (
+                    <tr key={accidente.id_reporte}>
+                      <td>{accidente.id_reporte}</td>
+                      <td>{accidente.accidente}</td>
+                      <td>{accidente.departamento}</td>
+                      <td>{accidente.fecha_accidente}</td>
+                      <td>
+                        {moment(accidente.hora_accidente, "HHmmss").format(
+                          "HH:mm:ss"
+                        )}
+                      </td>
+                      <td>
+                        <a href="#vermas">Ver más</a>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </Table>
           </Col>

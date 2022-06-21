@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./homePage.css";
 import reportAccident from "../../Assets/Images/reportAccident.svg";
-import getAccident from "../../Assets/Images/get-reports.svg";
 import { Link } from "react-router-dom";
 export const HomePage = () => {
   return (

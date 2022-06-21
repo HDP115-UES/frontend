@@ -1,13 +1,10 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   Container,
   Table,
   Row,
   Col,
   Button,
-  Form,
   Pagination,
 } from "react-bootstrap";
 import BackButton from "../../Components/BackButton/BackButton";
@@ -20,28 +17,28 @@ export const UserReport = () => {
       <Container className="mt-4">
         <Row>
           <Col>
-          <Table striped bordered hover size="sm">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Accidente</th>
-          <th>Departamento</th>
-          <th>Fecha/Hora reporte</th>
-          <th>Descripcion</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>*Carburo</td>
-          <Button variant="light">Editar</Button>{' '}
-        </tr>
-      </tbody>
-    </Table>
+            <Table striped bordered hover size="sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Accidente</th>
+                  <th>Departamento</th>
+                  <th>Fecha/Hora reporte</th>
+                  <th>Descripcion</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>*Carburo</td>
+                  <Button variant="light">Editar</Button>{" "}
+                </tr>
+              </tbody>
+            </Table>
           </Col>
         </Row>
         <Row>
@@ -67,5 +64,5 @@ export const UserReport = () => {
         </Row>
       </Container>
     </>
- );
+  );
 };
