@@ -5,6 +5,7 @@ import {
   GetAccidents,
   HomePage,
   ReportAccident,
+  ReportDetails,
   SignUp,
   UserHome,
   UserReport,
@@ -23,6 +24,7 @@ function App() {
           <Route path="/getAccidents" element={<GetAccidents />} />
           <Route path="/addReport" element={<ReportAccident />} />
           <Route path="/myReports" element={<UserReport />} />
+          <Route path="/myReports/:id" element={<ReportDetails />} />
           <Route path="/userHome" element={<UserHome />} />
         </Routes>
       </div>

@@ -5,6 +5,7 @@ import { SignUp } from "./SignUp/signUp";
 import { ReportAccident } from "./ReportAccident/reportAccident";
 import { UserHome } from "./UserHome/userHome";
 import { UserReport } from "./UserReport/userReport";
+import { ReportDetails } from "./ReportDetails/reportDetails";
 export {
   HomePage,
   GetAccidents,
@@ -13,4 +14,5 @@ export {
   ReportAccident,
   UserHome,
   UserReport,
+  ReportDetails
 };

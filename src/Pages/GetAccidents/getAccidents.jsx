@@ -2,26 +2,20 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import moment from "moment";
-import {
-  Container,
-  Table,
-  Row,
-  Col,
-  Button,
-  Form,
-  Pagination,
-} from "react-bootstrap";
+import { Container, Table, Row, Col, Button, Form } from "react-bootstrap";
 import BackButton from "../../Components/BackButton/BackButton";
 import "./getAccidentes.css";
 export const GetAccidents = () => {
   const [data, setData] = useState([]);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const getData = async () => {
       const response = await axios
         .get("http://127.0.0.1:8000/Reporte/Reportes/")
-        .catch((error) => {
-          console.log(error);
+        .catch((e) => {
+          setError("No server response");
+          console.log(e);
         });
       setData(response.data);
     };
@@ -40,12 +34,41 @@ export const GetAccidents = () => {
               Filtrar
             </Button>
           </div>
-          <div className="selectFilter">
+          <div className="selectFilter d-sm-flex">
+            <Form.Select className="me-2" aria-label="Default select example">
+              <option>Departamento</option>
+              <option value="1">Santa Ana</option>
+              <option value="2">Sonsonate</option>
+              <option value="3">Ahuachapán</option>
+              <option value="4">Chalatenango</option>
+              <option value="5">La Libertad</option>
+              <option value="6">Cabañas</option>
+              <option value="7">Cuscatlán</option>
+              <option value="8">La Paz</option>
+              <option value="9">San Salvador</option>
+              <option value="10">San Vicente</option>
+              <option value="11">San Miguel</option>
+              <option value="12">Usulután</option>
+              <option value="13">Morazán</option>
+              <option value="14">La unión</option>
+            </Form.Select>
             <Form.Select aria-label="Default select example">
-              <option>Selecciona una opción</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option>Tipo Accidente</option>
+              <option value="1">Tonel</option>
+              <option value="2">Vuelta de campana</option>
+              <option value="3">Volteo</option>
+              <option value="4">Choque</option>
+              <option value="5">Colision</option>
+              <option value="6">Alcance</option>
+              <option value="7">Atropello</option>
+              <option value="8">Embestimiento</option>
+              <option value="9">Arrastre</option>
+              <option value="10">Aplastamiento</option>
+              <option value="11">Accidente Combinado</option>
+              <option value="12">Accidente multiple</option>
+              <option value="13">Colsión fontral</option>
+              <option value="14">Colisión lateral</option>
+              <option value="15">Colisión mixta</option>
             </Form.Select>
           </div>
         </div>
@@ -55,7 +78,7 @@ export const GetAccidents = () => {
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Accidente</th>
+                  <th>Tipo Accidente</th>
                   <th>Departamento</th>
                   <th>Fecha</th>
                   <th>Hora</th>
@@ -63,47 +86,32 @@ export const GetAccidents = () => {
                 </tr>
               </thead>
               <tbody>
-                {data.map((accidente) => {
-                  return (
-                    <tr key={accidente.id_reporte}>
-                      <td>{accidente.id_reporte}</td>
-                      <td>{accidente.accidente}</td>
-                      <td>{accidente.departamento}</td>
-                      <td>{accidente.fecha_accidente}</td>
-                      <td>
-                        {moment(accidente.hora_accidente, "HHmmss").format(
-                          "HH:mm:ss"
-                        )}
-                      </td>
-                      <td>
-                        <a href="#vermas">Ver más</a>
-                      </td>
-                    </tr>
-                  );
-                })}
+                {error ? (
+                  <tr>
+                    <td colSpan={6}>{error}</td>
+                  </tr>
+                ) : (
+                  data.map((accidente) => {
+                    return (
+                      <tr key={accidente.id_reporte}>
+                        <td>{accidente.id_reporte}</td>
+                        <td>{accidente.tipo_accidente}</td>
+                        <td>{accidente.departamento}</td>
+                        <td>{accidente.fecha_accidente}</td>
+                        <td>
+                          {moment(accidente.hora_accidente, "HHmmss").format(
+                            "HH:mm:ss"
+                          )}
+                        </td>
+                        <td>
+                          <a href="#vermas">Ver más</a>
+                        </td>
+                      </tr>
+                    );
+                  })
+                )}
               </tbody>
             </Table>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="d-flex justify-content-end">
-            <Pagination>
-              <Pagination.First />
-              <Pagination.Prev />
-              <Pagination.Item>{1}</Pagination.Item>
-              <Pagination.Ellipsis />
-
-              <Pagination.Item>{10}</Pagination.Item>
-              <Pagination.Item>{11}</Pagination.Item>
-              <Pagination.Item active>{12}</Pagination.Item>
-              <Pagination.Item>{13}</Pagination.Item>
-              <Pagination.Item disabled>{14}</Pagination.Item>
-
-              <Pagination.Ellipsis />
-              <Pagination.Item>{20}</Pagination.Item>
-              <Pagination.Next />
-              <Pagination.Last />
-            </Pagination>
           </Col>
         </Row>
       </Container>
