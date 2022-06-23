@@ -38,7 +38,6 @@ export const ReportAccident = () => {
           console.log(res.data);
         });
       setPost(true);
-      setFormData({});
     } catch (e) {
       console.log(e.message);
     }

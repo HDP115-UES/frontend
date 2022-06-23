@@ -8,7 +8,6 @@ import {
   ReportDetails,
   SignUp,
   UserHome,
-  UserReport,
 } from "./Pages/index";
 import { Login } from "./Pages/Login/login";
 
@@ -22,9 +21,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/getAccidents" element={<GetAccidents />} />
+          <Route path="/getAccidents/:id" element={<ReportDetails />} />
           <Route path="/addReport" element={<ReportAccident />} />
-          <Route path="/myReports" element={<UserReport />} />
-          <Route path="/myReports/:id" element={<ReportDetails />} />
+          {/*  <Route path="/myReports" element={<UserReport />} >
+          <Route path=":id" element={<ReportDetails />} />
+          </Route> */}
           <Route path="/userHome" element={<UserHome />} />
         </Routes>
       </div>
