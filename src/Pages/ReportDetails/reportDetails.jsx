@@ -33,11 +33,12 @@ export const ReportDetails = () => {
         {data.tipo_accidente}
       </h1>
       <Row>
-        <Col md={6} className='d-flex justify-content-end'>
+        <Col md={6} className="d-flex justify-content-end">
           <img src={imgid} alt="wqwws" width={300} height={200}></img>
         </Col>
-        <Col md={6}  className='d-flex flex-column justify-content-start'>
-          <p>{data.descripcion}</p>
+        <Col md={6} className="d-flex flex-column justify-content-start">
+          <p>Descripcion:</p>
+          <p>{data.descripción}</p>
           <p>Fecha: {data.fecha_accidente}</p>
           <p>
             Hora: {moment(data.hora_accidente, "HHmmss").format("HH:mm:ss")}

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import moment from "moment";
-import { Container, Table, Row, Col} from "react-bootstrap";
+import { Container, Table, Row, Col } from "react-bootstrap";
 import BackButton from "../../Components/BackButton/BackButton";
 import "./getAccidentes.css";
 import { Link } from "react-router-dom";
@@ -11,18 +11,16 @@ export const GetAccidents = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    const getData = async () => {
-      const response = await axios
+    const getReportAccidents = async () => {
+      const { data } = await axios
         .get("http://127.0.0.1:8000/Reporte/Reportes/")
         .catch((e) => {
           setError("No server response");
-          console.log(e);
         });
-      setData(response.data);
+      setData(data);
     };
-    if (!data.length) getData();
-    console.log(data);
-  }, [data]);
+    getReportAccidents();
+  }, []);
   return (
     <>
       <BackButton />
